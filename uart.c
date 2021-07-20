@@ -7,21 +7,7 @@
 	工程中加入UART.c文件,源文件加入对UART.h的文件包含;
 *************************************************************************/
 #include "msp430f169_uart.h"
-#include "msp430f169_system.h"
-#include "msp430f169_gpio.h"
-#include <stdio.h>
-#include <stdarg.h>
 
-
-const struct
-{
-  GPIO_PIN TX;
-  GPIO_PIN RX;
-}UART_PIN[]=
-{
-  /*UART0*/{.TX={P3,3},.RX={P3,4}},        
-  /*UART1*/{.TX={P4,4},.RX={P4,5}}
-}; //引脚数组
 /*******************************************************************************
 *  函数名称：UART_Init(UARTn uartn,uint32_t BaudRate)
 *  功能说明：初始化串口，设置波特率
